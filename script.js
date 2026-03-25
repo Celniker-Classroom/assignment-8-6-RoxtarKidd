@@ -32,6 +32,12 @@ function getRandomNum(max) {
   return rand
   }
 
+function myAdder(a,b) {
+  a = Number(a);
+  b = Number(b);
+  added = a + b;
+  return added;
+}
 function onMyFuncClick() {
   const val = myFunc();
   setText('outMyFunc', val);
