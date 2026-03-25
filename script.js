@@ -17,6 +17,21 @@ function setText(id, value) { $(id).textContent = String(value); }
 
 // ----- Click Handlers (wire UI -> functions -> DOM) -----
 
+let count = 0
+let max = 0
+
+function myFunc() {
+  if (count <= 2) {
+  count++;
+  }
+  return count;
+}
+
+function getRandomNum(max) {
+  var rand = Math.floor(Math.random() * (max)) + 1
+  return rand
+  }
+
 function onMyFuncClick() {
   const val = myFunc();
   setText('outMyFunc', val);
