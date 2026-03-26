@@ -57,8 +57,8 @@ function  distance(x1, y1, x2, y2) {
 }
 
 function quadratic(x,y,z) {
-root1 = (-b - sqrt((b**2) - (4*x*z)) / (2*x));
-root2 = (-b + sqrt((b**2) - (4*x*z)) / (2*x));
+root1 = (-y - (sqrt((y**2) - (4*x*z))) / (2*x));
+root2 = (-y + (sqrt((y**2) - (4*x*z))) / (2*x));
 r.push(root1,root2);
 return r
 }
