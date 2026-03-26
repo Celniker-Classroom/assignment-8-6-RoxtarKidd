@@ -17,8 +17,11 @@ function setText(id, value) { $(id).textContent = String(value); }
 
 // ----- Click Handlers (wire UI -> functions -> DOM) -----
 
-let count = 0
-let max = 0
+let count = 0;
+let max = 0;
+var root1 = 0;
+var root2 = 0;
+const r = [];
 
 function myFunc() {
   if (count <= 2) {
@@ -36,7 +39,7 @@ function getRandomNum(max) {
   }
   return rand
   }
-  
+
 
 function myAdder(a,b) {
   a = Number(a);
@@ -51,6 +54,13 @@ function  distance(x1, y1, x2, y2) {
   y2 = Number(y2)
   d = Math.sqrt(((x2 - x1)**2 + (y2 - y1)**2));
   return d;
+}
+
+function quadratic(x,y,z) {
+root1 = (-b - sqrt((b**2) - (4*x*z)) / (2*x));
+root2 = (-b + sqrt((b**2) - (4*x*z)) / (2*x));
+r.push(root1,root2);
+return r
 }
 
 function onMyFuncClick() {
