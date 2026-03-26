@@ -28,9 +28,15 @@ function myFunc() {
 }
 
 function getRandomNum(max) {
+  if (isNaN(max)) {
+    rand = 0
+  }
+  else {
   var rand = Math.floor(Math.random() * (max)) + 1
+  }
   return rand
   }
+  
 
 function myAdder(a,b) {
   a = Number(a);
