@@ -23,7 +23,6 @@ var root1 = 0;
 var root2 = 0;
 var root1i = 0;
 var root2i = 0;
-var rooti = 0;
 const r = [];
 
 function myFunc() {
@@ -62,16 +61,18 @@ function  distance(x1, y1, x2, y2) {
 function quadratic(x,y,z) {
 root1 = ((-y - (Math.sqrt((y**2) - (4*x*z)))) / (2*x));
 root2 = ((-y + (Math.sqrt((y**2) - (4*x*z)))) / (2*x));
-root1i = ((-y) / (2*x));
-root2i = ((-y) / (2*x));
-rooti = (Math.sqrt(Math.abs((y**2) - (4*x*z))) / (2*x))
+root1i = (-y / (2*x));
+root2i = (Math.sqrt(Math.abs(y**2 - 4*x*z)) / (2*x))
+root1i = root1i.toString()
+root2i = root2i.toString() + "i"
 
-if (((y**2) - (4*x*z)) >= 0) {
+
+
+if ((((y**2) - (4*x*z))) >= 0) {
 r.push(root1,root2);
 }
-
-else if (((y**2) - (4*x*z)) < 0) {
-  r.push(root1i - (rooti + "i"), root2i + (rooti + "i"));
+else if ((((y**2) - (4*x*z))) < 0) {
+  r.push(root1i + " - " + root2i, root1i + " + " + root2i);
 }
 return r
 }
