@@ -103,6 +103,7 @@ function onDistanceClick() {
 }
 
 function onQuadraticClick() {
+  r.length = 0;
   const a = $('qa').value, b = $('qb').value, c = $('qc').value;
   const roots = quadratic(a, b, c);
   setText('outQuadratic', Array.isArray(roots) ? roots.join(', ') : roots);
