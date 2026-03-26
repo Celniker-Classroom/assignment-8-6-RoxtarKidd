@@ -64,10 +64,11 @@ root2 = ((-y + (Math.sqrt((y**2) - (4*x*z)))) / (2*x));
 root1i = (-y - ((Math.sqrt(Math.abs((y**2) - (4*x*z))))+"i") / (2*x));
 root2i = (-y + ((Math.sqrt(Math.abs((y**2) - (4*x*z))))+"i") / (2*x));
 if ((Math.sqrt((y**2) - (4*x*z))) >= 0) {
-r.push(root1,root2);}
+r.push(root1,root2);
+}
 
 else if ((Math.sqrt((y**2) - (4*x*z))) < 0) {
-  r.push(root1i, root2i);
+  r.push("0 + " + root1i,"0 + " + root2i);
 }
 return r
 }
