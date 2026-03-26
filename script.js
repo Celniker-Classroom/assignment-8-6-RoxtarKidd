@@ -33,7 +33,7 @@ function myFunc() {
 }
 
 function getRandomNum(max) {
-  if (isNaN(max)) {
+  if (isNaN(max) || max.trim() == 0) {
     rand = 0;
   }
   else {
