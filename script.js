@@ -21,6 +21,8 @@ let count = 0;
 let max = 0;
 var root1 = 0;
 var root2 = 0;
+var root1i = 0;
+var root2i = 0;
 const r = [];
 
 function myFunc() {
@@ -59,7 +61,14 @@ function  distance(x1, y1, x2, y2) {
 function quadratic(x,y,z) {
 root1 = ((-y - (Math.sqrt((y**2) - (4*x*z)))) / (2*x));
 root2 = ((-y + (Math.sqrt((y**2) - (4*x*z)))) / (2*x));
-r.push(root1,root2);
+root1i = (-y - ((Math.sqrt(Math.abs((y**2) - (4*x*z))))+"i") / (2*x));
+root2i = (-y + ((Math.sqrt(Math.abs((y**2) - (4*x*z))))+"i") / (2*x));
+if ((Math.sqrt((y**2) - (4*x*z))) >= 0) {
+r.push(root1,root2);}
+
+else if ((Math.sqrt((y**2) - (4*x*z))) < 0) {
+  r.push(root1i, root2i);
+}
 return r
 }
 
